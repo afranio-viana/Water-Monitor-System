@@ -14,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,13 +42,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
+                    //Toast.makeText(MainActivity.this,snapshot.toString(),Toast.LENGTH_SHORT).show();
                     String MAC=snapshot.child("mac").getValue(String.class);
                     Intent intent = new Intent(getApplicationContext(), menu_app.class);
                     intent.putExtra("key",MAC);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
 
-                    //Toast.makeText(MainActivity.this,"Existe",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this,snapshot.toString(),Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this,"Nao existe",Toast.LENGTH_SHORT).show();
+
                 }
             }
             @Override
@@ -56,8 +61,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     private void addUser(String imeiUser, String mac){
+        databaseReference=firebaseDatabase.getReference("User").child(imeiUser);
+        user.setUserImei(imeiUser);
+        user.setMac(mac);
+        databaseReference.setValue(user);
+    }
+    /*private void addUser(String imeiUser, String mac){
         databaseReference=firebaseDatabase.getReference("User").child(imeiUser);
         user.setUserImei(imeiUser);
         user.setMac(mac);
@@ -66,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 databaseReference.setValue(user);
                 Toast.makeText(MainActivity.this,"Adicionado",Toast.LENGTH_SHORT).show();
+                databaseReference=firebaseDatabase.getReference("User");
 
             }
             @Override
@@ -73,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Falha",Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }*/
     public String getImeiPhone(){
 
         TelephonyManager tm=(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
@@ -89,23 +100,6 @@ public class MainActivity extends AppCompatActivity {
         intentIntegrator.initiateScan();
 
     }
-    /*public void read_database(){
-        DatabaseReference reference=mDatabase.getReference().child("DHT").child("temperature");
-        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int temperatura= snapshot.child("-N5MOBzZgm5l5KiUkayq").getValue(int.class);
-                String temp= Integer.toString(temperatura);
-                Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
-                read_database();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this, "erro", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -125,8 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         } else {
-            Intent intent= new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(intent);
+
             //Toast.makeText(cad_user.this, "O usuário foi criado com sucesso!", Toast.LENGTH_SHORT).show();
             super.onActivityResult(requestCode=Integer.parseInt(null), resultCode=Integer.parseInt(null), data);
         }

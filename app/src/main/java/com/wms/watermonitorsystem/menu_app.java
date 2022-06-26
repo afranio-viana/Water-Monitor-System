@@ -10,8 +10,6 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,8 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class menu_app extends AppCompatActivity {
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabas;
+    DatabaseReference databaseReferenc;
     TextView text_temperature;
     TextView text_humidity;
     @Override
@@ -33,9 +31,9 @@ public class menu_app extends AppCompatActivity {
         String imei=getImeiPhone();
         text_temperature=findViewById(R.id.temperature);
         text_humidity=findViewById(R.id.humidity);
-        firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference=firebaseDatabase.getReference("User2");
-        databaseReference.child(MAC).addValueEventListener(new ValueEventListener() {
+        firebaseDatabas =FirebaseDatabase.getInstance();
+        databaseReferenc = firebaseDatabas.getReference("User2");
+        databaseReferenc.child(MAC).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
@@ -43,8 +41,8 @@ public class menu_app extends AppCompatActivity {
                     int humidity=snapshot.child("humidity").getValue(int.class);
                     String humidity_str=String.valueOf(humidity);
                     String temperature_str= String.valueOf(temperature);
-                    text_humidity.setText("Humidade:  "+humidity_str+" kg/m³");
-                    text_temperature.setText("Temperatura:  "+temperature_str+" °C");
+                    text_humidity.setText(humidity_str+" kg/m³");
+                    text_temperature.setText(temperature_str+" °C");
                 }else{
                     text_temperature.setText("Não Existe");
                     text_humidity.setText("Não Existe");
@@ -89,10 +87,10 @@ public class menu_app extends AppCompatActivity {
 
     }
     public  void resgistrarDispositivo(View view){
-        databaseReference=firebaseDatabase.getReference("User");
+        databaseReferenc = firebaseDatabas.getReference("User");
         String imei =getImeiPhone();
-        databaseReference=databaseReference.child(imei);
-        databaseReference.removeValue();
+        databaseReferenc = databaseReferenc.child(imei);
+        databaseReferenc.setValue(null);
         retornar();
     }
 
