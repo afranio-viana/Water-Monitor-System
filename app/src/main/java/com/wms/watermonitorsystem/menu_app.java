@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.TextView;
@@ -54,36 +55,6 @@ public class menu_app extends AppCompatActivity {
 
             }
         });
-       /*databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String MAC= snapshot.child("mac").getValue(String.class);
-                firebaseDatabas=FirebaseDatabase.getInstance();
-                reference=firebaseDatabas.getReference("User2").child(MAC);
-                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snap) {
-                        if(snap.exists()){
-                            int temperature=snap.child("temperature").getValue(int.class);
-                            String temperature_str= String.valueOf(temperature);
-                            text_temperature.setText(temperature_str);
-                        }else{
-                            text_temperature.setText("Não Existe");
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
 
     }
     public  void resgistrarDispositivo(View view){
@@ -101,8 +72,7 @@ public class menu_app extends AppCompatActivity {
     }
     public String getImeiPhone(){
 
-        TelephonyManager tm=(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-        String device_id=tm.getImei();
+        String device_id= Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
         return device_id;
 
     }

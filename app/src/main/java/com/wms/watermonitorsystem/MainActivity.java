@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Button;
@@ -67,28 +68,9 @@ public class MainActivity extends AppCompatActivity {
         user.setMac(mac);
         databaseReference.setValue(user);
     }
-    /*private void addUser(String imeiUser, String mac){
-        databaseReference=firebaseDatabase.getReference("User").child(imeiUser);
-        user.setUserImei(imeiUser);
-        user.setMac(mac);
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                databaseReference.setValue(user);
-                Toast.makeText(MainActivity.this,"Adicionado",Toast.LENGTH_SHORT).show();
-                databaseReference=firebaseDatabase.getReference("User");
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this,"Falha",Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
     public String getImeiPhone(){
 
-        TelephonyManager tm=(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-        String device_id=tm.getImei();
+        String device_id= Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
         return device_id;
 
     }
