@@ -4,7 +4,6 @@
     package="com.wms.watermonitorsystem">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,10 +16,19 @@
         android:theme="@style/Theme.WaterMonitorSystem"
         tools:targetApi="31">
         <activity
-            android:name=".menu_app"
+            android:name=".MenuAplication"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseReservoir"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashWMS"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:replace="android:screenOrientation">
@@ -30,6 +38,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

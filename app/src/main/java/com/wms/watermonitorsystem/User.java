@@ -3,6 +3,7 @@ package com.wms.watermonitorsystem;
 public class User {
     private String imei;
     private String mac;
+    private String reservoir;
 
     public User(){}
 
@@ -21,5 +22,9 @@ public class User {
     public void setMac(String mac){
         this.mac=mac;
     }
+
+    public String getReservoir(){return reservoir;}
+
+    public void setReservoir(String reservoir){this.reservoir=reservoir;}
 
 }
