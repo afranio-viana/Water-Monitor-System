@@ -47,6 +47,8 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:backgroundTint="@color/background_main"
+        android:clickable="true"
+        android:onClick="click_here"
         app:itemIconTint="@color/background_main"
         app:itemTextColor="@color/background_main"
         app:layout_constraintBottom_toBottomOf="parent"

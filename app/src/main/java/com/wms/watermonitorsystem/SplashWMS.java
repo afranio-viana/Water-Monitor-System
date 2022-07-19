@@ -33,7 +33,7 @@ public class SplashWMS extends AppCompatActivity {
                 if(snapshot.exists()){
                     finish();
                     String MAC = snapshot.child("mac").getValue(String.class);
-                    Intent intent = new Intent(getApplicationContext(),MenuAplication.class);
+                    Intent intent = new Intent(getApplicationContext(),MenuAppActivity.class);
                     intent.putExtra("key", MAC);
                     startActivity(intent);
                 }else{
