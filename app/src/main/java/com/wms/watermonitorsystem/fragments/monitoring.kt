@@ -26,7 +26,7 @@ class monitoring : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                if(snapshot.exists()){
                    val temperature=view?.findViewById<TextView>(R.id.temperature)
-                   temperature?.text=snapshot.child("temperature").getValue().toString()+" Cº"
+                   temperature?.text=snapshot.child("temperature").getValue().toString()+" °C"
                    val humidity=view?.findViewById<TextView>(R.id.humidity)
                    humidity?.text=snapshot.child("humidity").getValue().toString()+" %"
                }

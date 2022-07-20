@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
                 if (isMac) {
                     //addUser(deviceId, mac);
-                    finish();
                     Intent intent = new Intent(getApplicationContext(), ChooseReservoir.class);
                     intent.putExtra("key", mac);
                     startActivity(intent);

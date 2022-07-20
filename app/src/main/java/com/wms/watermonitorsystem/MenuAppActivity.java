@@ -106,5 +106,9 @@ public class MenuAppActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+    @Override
+    public void onBackPressed() {
+        // não chame o super desse método
+    }
 
 }
