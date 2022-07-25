@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wms.watermonitorsystem">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_wms"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_wms"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WaterMonitorSystem"
+        tools:targetApi="31">
+        <activity
+            android:name=".MenuAplication"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseReservoir"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashWMS"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

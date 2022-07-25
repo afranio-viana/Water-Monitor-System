@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "734515603907",
+    "project_id": "water-monitor-system-6f5f0",
+    "storage_bucket": "water-monitor-system-6f5f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734515603907:android:e880a3bddf4f06d3957576",
+        "android_client_info": {
+          "package_name": "com.wms.watermonitorsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734515603907-oq8ts5mmcgn7s4a61jk2s9r5eh8qmrdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2dgK3tGBDMofuuurBXzAY69uBuJ13Uwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734515603907-oq8ts5mmcgn7s4a61jk2s9r5eh8qmrdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
