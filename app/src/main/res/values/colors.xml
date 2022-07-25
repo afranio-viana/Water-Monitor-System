@@ -6,7 +6,8 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFAFA</color>
     <color name="background_main">#0365A7</color>
     <color name="submit">#00A859</color>
+    <color name="silver">#c0c0c0</color>
 </resources>
