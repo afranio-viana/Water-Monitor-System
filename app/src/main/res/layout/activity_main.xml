@@ -48,8 +48,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/inter_bold"
-        android:text="Aperte no botão abaixo e leia um
-        QR Code"
+        android:text="Aperte no botão abaixo e leia um QR Code"
         android:textAlignment="center"
         android:textColor="@color/background_main"
         android:textSize="21sp"

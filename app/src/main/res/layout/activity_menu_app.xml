@@ -73,8 +73,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:background="@drawable/ic_baseline_exit_to_app_24"
         android:backgroundTint="#FFFAFA"
         android:fontFamily="@font/inter_bold"
