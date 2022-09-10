@@ -12,23 +12,70 @@
 
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/temperature_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_marginTop="24dp"
             android:foregroundGravity="center_vertical|center|center_horizontal"
             android:gravity="center|center_horizontal|center_vertical"
-            android:text="Em desenvolvimento..."
+            android:text="Temperatura"
             android:textColor="@color/background_main"
-            android:textSize="34sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/highest_temperature"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginStart="64dp"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Em desenvolvimento..."
 
+            android:textColor="@color/background_main"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idGraphView"
+            app:layout_constraintVertical_bias="0.066" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/idGraphView"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperature_label" />
+
+        <TextView
+            android:id="@+id/lowest_temperature"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="64dp"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Em desenvolvimento..."
+            android:textColor="@color/background_main"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/highest_temperature"
+            app:layout_constraintTop_toBottomOf="@+id/idGraphView"
+            app:layout_constraintVertical_bias="0.066" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

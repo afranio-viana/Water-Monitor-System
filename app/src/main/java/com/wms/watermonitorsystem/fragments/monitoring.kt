@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.*
 import com.wms.watermonitorsystem.R
+import com.yangp.ypwaveview.YPWaveView
 import kotlin.reflect.typeOf
 
 class monitoring : Fragment() {
@@ -34,8 +35,12 @@ class monitoring : Fragment() {
                     for( child:DataSnapshot in snapshot.children){
                         val temp=(child.child("temperature").getValue().toString()).toFloat().toInt()
                         val humi=(child.child("humidity").getValue().toString()).toFloat().toInt()
+                        val distance=(child.child("distance").getValue().toString()).toFloat().toInt()
                         temperature?.text=temp.toString()+" °C"
                         humidity?.text=humi.toString()+" %"
+                        val percent=((100*distance)/500)
+                        val nivel=view?.findViewById<YPWaveView>(R.id.YPWaveView)
+                        nivel?.progress=percent.toInt()*10
 
                     }
                 }
