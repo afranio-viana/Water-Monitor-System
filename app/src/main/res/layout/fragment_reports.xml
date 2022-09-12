@@ -5,77 +5,220 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.reports">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-        <TextView
-            android:id="@+id/temperature_label"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:foregroundGravity="center_vertical|center|center_horizontal"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Temperatura"
-            android:textColor="@color/background_main"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/highest_temperature"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_marginStart="64dp"
-            android:foregroundGravity="center_vertical|center|center_horizontal"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Em desenvolvimento..."
 
-            android:textColor="@color/background_main"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idGraphView"
-            app:layout_constraintVertical_bias="0.066" />
+            <TextView
+                android:id="@+id/temperature_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Temperatura"
+                android:textColor="@color/background_main"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.jjoe64.graphview.GraphView
-            android:id="@+id/idGraphView"
-            android:layout_width="0dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temperature_label" />
+            <TextView
+                android:id="@+id/highest_temperature"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginStart="64dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
 
-        <TextView
-            android:id="@+id/lowest_temperature"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="64dp"
-            android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idGraphView" />
 
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Em desenvolvimento..."
-            android:textColor="@color/background_main"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/highest_temperature"
-            app:layout_constraintTop_toBottomOf="@+id/idGraphView"
-            app:layout_constraintVertical_bias="0.066" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/idGraphView"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temperature_label" />
 
+            <TextView
+                android:id="@+id/lowest_temperature"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="64dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/highest_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/idGraphView" />
+
+            <TextView
+                android:id="@+id/humidity_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginTop="15dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Umidade"
+                android:textColor="@color/background_main"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/highest_temperature" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/idGraphViewHumidity"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/humidity_label" />
+
+            <TextView
+                android:id="@+id/highest_humidity"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginStart="64dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
+
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idGraphViewHumidity" />
+
+            <TextView
+                android:id="@+id/lowest_humidity"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="64dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/highest_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/idGraphViewHumidity" />
+
+
+            <TextView
+                android:id="@+id/distance_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginTop="15dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Nível de água"
+                android:textColor="@color/background_main"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/highest_humidity" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/idGraphViewDistance"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/distance_label" />
+
+            <TextView
+                android:id="@+id/highest_distance"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginStart="64dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
+
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idGraphViewDistance" />
+
+            <TextView
+                android:id="@+id/lowest_distance"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="64dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/highest_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/idGraphViewDistance" />
+
+            <TextView
+                android:id="@+id/difference_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginTop="15dp"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Em desenvolvimento..."
+                android:textColor="@color/background_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/highest_distance" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>
