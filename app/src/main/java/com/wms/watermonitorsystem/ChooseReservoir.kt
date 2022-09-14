@@ -21,6 +21,7 @@ class ChooseReservoir : AppCompatActivity() {
         setContentView(R.layout.activity_choose_reservoir)
 
         var mac=intent.getStringExtra("key")
+        var reservoir=intent.getStringExtra("reservoir")
         var user_id_android:String=getImeiPhone()
         database= FirebaseDatabase.getInstance().getReference("User")
         //var textView: TextView =findViewById<TextView>(R.id.apenas_um_teste)

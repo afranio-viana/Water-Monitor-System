@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,8 +34,11 @@ public class SplashWMS extends AppCompatActivity {
                 if(snapshot.exists()){
                     finish();
                     String MAC = snapshot.child("mac").getValue(String.class);
+                    String reservoir=snapshot.child("reservoir").getValue(String.class);
+                    //Toast.makeText(SplashWMS.this, reservoir,Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(),MenuAppActivity.class);
                     intent.putExtra("key", MAC);
+                    intent.putExtra("reservoir",reservoir);
                     startActivity(intent);
                 }else{
                     finish();

@@ -34,6 +34,7 @@ class reports : Fragment() {
         var fragview:View= inflater.inflate(R.layout.fragment_reports, container, false)
         // Inflate the layout for this fragment
         var mac= arguments?.getString("key")
+        var reservoir=arguments?.getString("reservoir")
         database= FirebaseDatabase.getInstance().getReference("User2").child(mac.toString())
         val sdf : SimpleDateFormat= SimpleDateFormat("EEEE dd-MM-yyy HH:mm")
         //Toast.makeText(this.context, database.toString(), Toast.LENGTH_SHORT).show()
@@ -144,7 +145,7 @@ class reports : Fragment() {
                         val minutes = diff.toMinutes()
                         diff = diff.minusMinutes(minutes)
                         val seconds = diff.seconds
-                        difference_distance_view?.text="Levou aproximandamente "+days.toString()+" dias, "+hours.toString()+"h "+minutes.toString()+"min "+seconds.toString()+"s para encher o reservatório!"
+                        difference_distance_view?.text="Levou aproximandamente "+days.toString()+" dias, "+hours.toString()+"h "+minutes.toString()+"min "+seconds.toString()+"s para esvaziar o reservatório!"
                     }else{
                         var diff: Duration = Duration.between(highest_distance_difference.toInstant(), lowest_distance_difference.toInstant())
                         val days = diff.toDays()
@@ -154,7 +155,7 @@ class reports : Fragment() {
                         val minutes = diff.toMinutes()
                         diff = diff.minusMinutes(minutes)
                         val seconds = diff.seconds
-                        difference_distance_view?.text="Levou aproximandamente "+days.toString()+" dias, "+hours.toString()+"h "+minutes.toString()+"min "+seconds.toString()+"s para esvaziar o reservatório!"
+                        difference_distance_view?.text="Levou aproximandamente "+days.toString()+" dias, "+hours.toString()+"h "+minutes.toString()+"min "+seconds.toString()+"s para encher o reservatório!"
                     }
 
                     val highest_distance_view=view?.findViewById<TextView>(R.id.highest_distance)

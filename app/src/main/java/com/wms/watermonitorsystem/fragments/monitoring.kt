@@ -29,6 +29,7 @@ class monitoring : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var mac = arguments?.getString("key")
+        var reservoir=arguments?.getString("reservoir")
         database = FirebaseDatabase.getInstance().getReference("User2")
         lastQuery = database.child(mac.toString()).orderByKey().limitToLast(1)
         lastQuery.addValueEventListener(object : ValueEventListener {
@@ -42,9 +43,27 @@ class monitoring : Fragment() {
                         val distance = (child.child("distance").getValue().toString()).toFloat().toInt()
                         temperature?.text = temp.toString() + " °C"
                         humidity?.text = humi.toString() + " %"
-                        val percent = ((100 * distance) / 500)
+
+                        var distance_total=0
+                        if(reservoir.equals("teste")){
+                            distance_total=400
+                        }else if(reservoir.equals("1000")){
+                            distance_total=800
+                        }else if(reservoir.equals("500")){
+                            distance_total=700
+                        }else{
+                            distance_total=500
+                        }
+
                         val nivel = view?.findViewById<YPWaveView>(R.id.YPWaveView)
-                        nivel?.progress = percent.toInt() * 10
+                        if(distance_total<distance){
+                            nivel?.progress = 0
+                        }else{
+                            val percent = ((100 * (distance_total-distance)) / distance_total)
+                            nivel?.progress = percent.toInt()*10
+                        }
+
+
 
                     }
                 }

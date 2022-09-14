@@ -37,17 +37,19 @@ public class MenuAppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Bundle extras = getIntent().getExtras();
         String MAC = extras.getString("key");
+        String reservoir=extras.getString("reservoir");
+        //Toast.makeText(MenuAppActivity.this, reservoir,Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_menu_app);
         bottomNav=findViewById(R.id.bottom_navigation);
-        replacefragment(monitoring,MAC);
+        replacefragment(monitoring,MAC,reservoir);
         bottomNav.setOnItemSelectedListener(item -> {
             int id=item.getItemId();
             switch (id){
                 case R.id.page_1:
-                    replacefragment(monitoring,MAC);
+                    replacefragment(monitoring,MAC,reservoir);
                     return true;
                 case R.id.page_2:
-                    replacefragment(reports,MAC);
+                    replacefragment(reports,MAC,reservoir);
                     return true;
             }
             return true;
@@ -97,9 +99,10 @@ public class MenuAppActivity extends AppCompatActivity {
         return deviceId;
     }
 
-    public void replacefragment(Fragment newFragment,String mac){
+    public void replacefragment(Fragment newFragment,String mac,String reservoir){
         Bundle bundle=new Bundle();
         bundle.putString("key", mac);
+        bundle.putString("reservoir",reservoir);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         newFragment.setArguments(bundle);
         transaction.replace(R.id.frame_layout, newFragment);
