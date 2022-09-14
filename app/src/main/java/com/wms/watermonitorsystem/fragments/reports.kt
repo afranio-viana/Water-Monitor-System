@@ -159,14 +159,14 @@ class reports : Fragment() {
                     }
 
                     val highest_distance_view=view?.findViewById<TextView>(R.id.highest_distance)
-                    highest_distance_view?.text="Maior distância:\n"+highest_distance.toString()+"cm"+"\n"+time_highest_distance
+                    highest_distance_view?.text="Maior distância:\n"+highest_distance.toString()+"mm"+"\n"+time_highest_distance
                     val lowest_distance_view=view?.findViewById<TextView>(R.id.lowest_distance)
-                    lowest_distance_view?.text="Menor distância:\n"+lowest_distance.toString()+"cm"+"\n"+time_lowest_distance
+                    lowest_distance_view?.text="Menor distância:\n"+lowest_distance.toString()+"mm"+"\n"+time_lowest_distance
                     lineGraphView_Distance?.animate()
                     lineGraphView_Distance.viewport.borderColor=Color.parseColor("#FF0000")
                     series_distance.color = Color.parseColor("#0365A7")
                     lineGraphView_Distance?.addSeries(series_distance)
-                    lineGraphView_Distance.gridLabelRenderer.verticalAxisTitle="cm"
+                    lineGraphView_Distance.gridLabelRenderer.verticalAxisTitle="mm"
                     lineGraphView_Distance.gridLabelRenderer.horizontalAxisTitle="Número de Registros"
                     lineGraphView_Distance.gridLabelRenderer.numHorizontalLabels=6
                     lineGraphView_Distance.gridLabelRenderer.numVerticalLabels=8

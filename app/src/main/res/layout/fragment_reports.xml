@@ -65,84 +65,84 @@
 
             <View
                 android:id="@+id/view5"
-                android:elevation="3dp"
                 android:layout_width="154dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/sensors_component"
+                android:background="@drawable/custom_background_data_chart"
+                android:elevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.182"
+                app:layout_constraintHorizontal_bias="0.155"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphView" />
 
             <View
                 android:id="@+id/view6"
-                android:elevation="3dp"
                 android:layout_width="154dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/sensors_component"
+                android:background="@drawable/custom_background_data_chart"
+                android:elevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintHorizontal_bias="0.867"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphView" />
 
             <View
                 android:id="@+id/view7"
-                android:elevation="3dp"
                 android:layout_width="154dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/sensors_component"
+                android:background="@drawable/custom_background_data_chart"
+                android:elevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.217"
+                app:layout_constraintHorizontal_bias="0.182"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphViewHumidity" />
 
             <View
                 android:id="@+id/view10"
-                android:elevation="3dp"
                 android:layout_width="154dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/sensors_component"
+                android:background="@drawable/custom_background_data_chart"
+                android:elevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.836"
+                app:layout_constraintHorizontal_bias="0.902"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphViewHumidity" />
 
             <View
                 android:id="@+id/view11"
-                android:elevation="3dp"
                 android:layout_width="154dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/sensors_component"
+                android:background="@drawable/custom_background_data_chart"
+                android:elevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.817"
+                app:layout_constraintHorizontal_bias="0.867"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphViewDistance" />
 
             <View
                 android:id="@+id/view12"
-                android:elevation="3dp"
                 android:layout_width="154dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/sensors_component"
+                android:background="@drawable/custom_background_data_chart"
+                android:elevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.182"
+                app:layout_constraintHorizontal_bias="0.155"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphViewDistance" />
 
             <TextView
                 android:id="@+id/highest_temperature"
-                android:elevation="3dp"
                 android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
-                android:layout_marginStart="56dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="32dp"
+                android:elevation="3dp"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
 
                 android:gravity="center|center_horizontal|center_vertical"
@@ -167,13 +167,13 @@
 
             <TextView
                 android:id="@+id/lowest_temperature"
-                android:elevation="3dp"
                 android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:layout_marginStart="20dp"
-
                 android:layout_marginTop="32dp"
+
+                android:elevation="3dp"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
                 android:gravity="center|center_horizontal|center_vertical"
                 android:text="..."
@@ -181,7 +181,7 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.016"
+                app:layout_constraintHorizontal_bias="0.388"
                 app:layout_constraintStart_toEndOf="@+id/highest_temperature"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphView" />
 
@@ -217,12 +217,12 @@
 
             <TextView
                 android:id="@+id/highest_humidity"
-                android:elevation="3dp"
                 android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
-                android:layout_marginStart="66dp"
+                android:layout_marginStart="56dp"
                 android:layout_marginTop="32dp"
+                android:elevation="3dp"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
                 android:gravity="center|center_horizontal|center_vertical"
                 android:text="..."
@@ -234,13 +234,13 @@
 
             <TextView
                 android:id="@+id/lowest_humidity"
-                android:elevation="3dp"
                 android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
-
                 android:layout_marginStart="8dp"
+
                 android:layout_marginTop="32dp"
+                android:elevation="3dp"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
                 android:gravity="center|center_horizontal|center_vertical"
                 android:text="..."
@@ -248,7 +248,7 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.202"
+                app:layout_constraintHorizontal_bias="0.521"
                 app:layout_constraintStart_toEndOf="@+id/highest_humidity"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphViewHumidity" />
 
@@ -282,12 +282,12 @@
 
             <TextView
                 android:id="@+id/highest_distance"
-                android:elevation="3dp"
                 android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
-                android:layout_marginStart="56dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="32dp"
+                android:elevation="3dp"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
 
                 android:gravity="center|center_horizontal|center_vertical"
@@ -300,12 +300,12 @@
 
             <TextView
                 android:id="@+id/lowest_distance"
-                android:elevation="3dp"
                 android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
+                android:elevation="3dp"
 
                 android:foregroundGravity="center_vertical|center|center_horizontal"
                 android:gravity="center|center_horizontal|center_vertical"
@@ -314,7 +314,7 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.349"
                 app:layout_constraintStart_toEndOf="@+id/highest_distance"
                 app:layout_constraintTop_toBottomOf="@+id/idGraphViewDistance" />
 
