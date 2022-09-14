@@ -73,8 +73,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="39dp"
-        android:layout_height="38dp"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
         android:background="@drawable/ic_baseline_exit_to_app_24"
         android:backgroundTint="#FFFAFA"
         android:fontFamily="@font/inter_bold"
@@ -87,7 +87,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.581" />
 
     <View
         android:id="@+id/divider"
@@ -133,7 +133,7 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -147,17 +147,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="43dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider"
-        app:srcCompat="@drawable/ic_baseline_bubble_chart_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
