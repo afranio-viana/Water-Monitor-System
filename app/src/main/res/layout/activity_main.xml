@@ -25,7 +25,7 @@
         android:layout_width="144dp"
         android:layout_height="130dp"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="27dp"
         android:background="@drawable/ic_baseline_qr_code_scanner_24"
         android:backgroundTint="@color/submit"
@@ -42,19 +42,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="315dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/inter_bold"
-        android:text="Aperte no botão abaixo e leia um QR Code"
+        android:text="Aperte no botão abaixo \ne leia um QR Code"
         android:textAlignment="center"
         android:textColor="@color/background_main"
         android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -64,6 +61,7 @@
         android:layout_height="19dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/inter_bold"
+
         android:text=" © WMS "
         android:textColor="@color/background_main"
         app:layout_constraintBottom_toBottomOf="parent"

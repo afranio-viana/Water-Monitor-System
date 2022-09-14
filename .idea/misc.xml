@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/drawable-v24/sensors_component.xml" value="0.1515" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/drawable/cornerstyle.xml" value="0.1515" />
+        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/drawable/custom_background_chart.xml" value="0.1515" />
+        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/drawable/custom_modal.xml" value="0.1515" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.1515" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/drawable/ic_baseline_insert_chart_outlined_24.xml" value="0.124" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/activity_choose_reservoir.xml" value="0.12" />
-        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/activity_menu_aplication.xml" value="0.20742753623188406" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/activity_menu_app.xml" value="0.1734375" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/activity_splash_wms.xml" value="0.176" />
         <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/fragment_monitoring.xml" value="0.264" />
-        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/fragment_reports.xml" value="0.1734375" />
+        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/fragment_reports.xml" value="0.176" />
+        <entry key="..\:/Users/Miguel/StudioProjects/Water-Monitor-System/app/src/main/res/layout/modal_level_water.xml" value="0.2" />
       </map>
     </option>
   </component>
