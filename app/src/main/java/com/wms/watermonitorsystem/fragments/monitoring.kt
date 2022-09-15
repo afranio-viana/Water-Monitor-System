@@ -46,13 +46,13 @@ class monitoring : Fragment() {
 
                         var distance_total=0
                         if(reservoir.equals("teste")){
-                            distance_total=400
+                            distance_total=24
                         }else if(reservoir.equals("1000")){
-                            distance_total=800
+                            distance_total=80
                         }else if(reservoir.equals("500")){
-                            distance_total=700
+                            distance_total=70
                         }else{
-                            distance_total=500
+                            distance_total=50
                         }
 
                         val nivel = view?.findViewById<YPWaveView>(R.id.YPWaveView)
